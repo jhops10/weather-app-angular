@@ -5,7 +5,9 @@
 
     <div class="weather-data">
       <div class="location">São Paulo</div>
-      <div class="temperature">{{ 14.4 | number : "1.0-0" }}°C</div>
+      <div class="temperature">
+        {{ weatherData?.main?.temp | number : "1.0-0" }} °F
+      </div>
     </div>
   </div>
   <div class="lower-data">
@@ -16,21 +18,21 @@
           <img src="../assets/min-temp.png" />
           <span>min</span>
         </div>
-        <div class="info-block-value">10°C</div>
+        <div class="info-block-value">{{ weatherData?.main?.temp_min }} °F</div>
       </div>
       <div class="info-block">
         <div class="info-block-label">
           <img src="../assets/max-temp.png" />
           <span>max</span>
         </div>
-        <div class="info-block-value">30°C</div>
+        <div class="info-block-value">{{ weatherData?.main?.temp_max }} °F</div>
       </div>
       <div class="info-block">
         <div class="info-block-label">
           <img src="../assets/humidity.png" />
           <span>humidity</span>
         </div>
-        <div class="info-block-value">77%</div>
+        <div class="info-block-value">{{ weatherData?.main?.humidity }}%</div>
       </div>
       <div class="info-block">
         <div class="info-block-label">
