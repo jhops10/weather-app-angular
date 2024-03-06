@@ -17,7 +17,7 @@
 
     <div class="weather-data">
       <div class="location">{{ weatherData.name }}</div>
-      <div class="temperature">{{ weatherData.main.temp | celsius }} °C</div>
+      <div class="temperature">{{ weatherData.main.temp }} °C</div>
     </div>
   </div>
   <div class="lower-data">
@@ -28,18 +28,14 @@
           <img src="../assets/min-temp.png" />
           <span>min</span>
         </div>
-        <div class="info-block-value">
-          {{ weatherData.main.temp_min | celsius }} °C
-        </div>
+        <div class="info-block-value">{{ weatherData.main.temp_min }} °C</div>
       </div>
       <div class="info-block">
         <div class="info-block-label">
           <img src="../assets/max-temp.png" />
           <span>max</span>
         </div>
-        <div class="info-block-value">
-          {{ weatherData.main.temp_max | celsius }} °C
-        </div>
+        <div class="info-block-value">{{ weatherData.main.temp_max }} °C</div>
       </div>
       <div class="info-block">
         <div class="info-block-label">
